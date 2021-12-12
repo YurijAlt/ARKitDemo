@@ -35,7 +35,6 @@ class ViewController: UIViewController {
         boxNode.position = SCNVector3(0, 0, -0.5)
         
         scene.rootNode.addChildNode(boxNode)
-        
         sceneView.scene = scene
         
     }
