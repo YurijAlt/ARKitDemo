@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         
         let boxNode = SCNNode(geometry: boxGeometry)
         boxNode.geometry?.materials = [material, materialTwo, materialThree]
-        
         boxNode.position = SCNVector3(0, 0, -0.5)
         
         scene.rootNode.addChildNode(boxNode)
