@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
 
         let scene = SCNScene()
@@ -28,14 +27,22 @@ class ViewController: UIViewController {
         material.diffuse.contents = UIColor.purple
         materialTwo.diffuse.contents = UIColor.yellow
         materialThree.diffuse.contents = UIColor.green
-        
         let boxNode = SCNNode(geometry: boxGeometry)
         boxNode.geometry?.materials = [material, materialTwo, materialThree]
-        boxNode.position = SCNVector3(0, 0, -0.5)
-        
+        boxNode.position = SCNVector3(0, 0, -1.0)
         scene.rootNode.addChildNode(boxNode)
-        sceneView.scene = scene
         
+        let textGeometry = SCNText(string: "Hello, World!", extrusionDepth: 2.0)
+        let textMaterial = SCNMaterial()
+        textMaterial.diffuse.contents = UIColor.red
+//        textGeometry.firstMaterial?.diffuse.contents = UIColor.red
+        let textNode = SCNNode(geometry: textGeometry)
+        textNode.scale = SCNVector3(0.005, 0.005, 0.005)
+        textNode.geometry?.materials = [textMaterial]
+        textNode.position = SCNVector3(0, 0.2, -1.0)
+        scene.rootNode.addChildNode(textNode)
+        
+        sceneView.scene = scene
     }
     
     override func viewWillAppear(_ animated: Bool) {
