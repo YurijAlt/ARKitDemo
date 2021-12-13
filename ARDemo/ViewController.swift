@@ -19,16 +19,17 @@ class ViewController: UIViewController {
         sceneView.showsStatistics = true
 
         let scene = SCNScene()
+        createFigures(in: scene)
         
-        let sphereGepmetry = SCNSphere(radius: 0.1)
-        let sphereMaterial = SCNMaterial()
-        
-        
-        sphereMaterial.diffuse.contents = UIImage(named: "head")
-        let sphereNode = SCNNode(geometry: sphereGepmetry)
-        sphereNode.geometry?.materials = [sphereMaterial]
-        sphereNode.position = SCNVector3(0, 0, -1)
-        scene.rootNode.addChildNode(sphereNode)
+//        let sphereGepmetry = SCNSphere(radius: 0.1)
+//        let sphereMaterial = SCNMaterial()
+//
+//
+//        sphereMaterial.diffuse.contents = UIImage(named: "head")
+//        let sphereNode = SCNNode(geometry: sphereGepmetry)
+//        sphereNode.geometry?.materials = [sphereMaterial]
+//        sphereNode.position = SCNVector3(0, 0, -1)
+//        scene.rootNode.addChildNode(sphereNode)
         
         
 //        let boxGeometry = SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0.05)
@@ -55,6 +56,27 @@ class ViewController: UIViewController {
         
         sceneView.scene = scene
     }
+    
+    private func createFigures(in scene: SCNScene) {
+        let array: [SCNGeometry] = [SCNPlane(), SCNSphere(), SCNBox(), SCNPyramid(), SCNTube(),  SCNCone(), SCNTorus(), SCNCylinder(), SCNCapsule()]
+        var xCoordinate: Double = 1
+        sceneView.autoenablesDefaultLighting = true
+        for geometryShape in array {
+            let node = SCNNode(geometry: geometryShape)
+            
+            let material = SCNMaterial()
+            material.diffuse.contents = UIColor.red
+            
+            node.geometry?.materials = [material]
+            node.scale = SCNVector3(0.1, 0.1, 0.1)
+            
+            node.position = SCNVector3(xCoordinate, 0, -1)
+            xCoordinate -= 0.2
+            
+            scene.rootNode.addChildNode(node)
+        }
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
