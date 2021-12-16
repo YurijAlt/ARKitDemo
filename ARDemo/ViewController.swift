@@ -23,13 +23,13 @@ class ViewController: UIViewController {
         sceneView.delegate = self
         
         sceneView.showsStatistics = true
-
+        
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         
         sceneView.autoenablesDefaultLighting = true
         let scene = SCNScene()
         sceneView.scene = scene
-        
+        sceneView.scene.physicsWorld.contactDelegate = self
         setupGestures()
     }
     
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     func createBox(hitResult: ARHitTestResult) {
         let position = SCNVector3(
             hitResult.worldTransform.columns.3.x,
-            hitResult.worldTransform.columns.3.y + 0.05 + 0.5 ,
+            hitResult.worldTransform.columns.3.y + 0.5,
             hitResult.worldTransform.columns.3.z
         )
         
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
         
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
-
+        
         configuration.planeDetection = .horizontal
         // Run the view's session
         sceneView.session.run(configuration)
@@ -77,13 +77,13 @@ class ViewController: UIViewController {
         // Pause the view's session
         sceneView.session.pause()
     }
-
+    
 }
 
 
-    //MARK: - ARSCNViewDelegate
+//MARK: - ARSCNViewDelegate
 extension ViewController: ARSCNViewDelegate {
-
+    
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard anchor is ARPlaneAnchor else { return }
         
@@ -103,4 +103,17 @@ extension ViewController: ARSCNViewDelegate {
         plane?.update(anchor: anchor as! ARPlaneAnchor)
     }
     
+}
+
+extension ViewController: SCNPhysicsContactDelegate {
+    func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
+        
+        let nodeA = contact.nodeA
+        let nodeB = contact.nodeB
+        if contact.nodeB.physicsBody?.collisionBitMask == BitMuskCategory.box {
+            nodeA.geometry?.materials.first?.diffuse.contents = UIColor.red
+            return
+        }
+        nodeB.geometry?.materials.first?.diffuse.contents = UIColor.red
+    }
 }

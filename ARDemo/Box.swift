@@ -13,7 +13,7 @@ class Box: SCNNode {
         init(atPosition position: SCNVector3) {
             super.init()
             
-            let boxGeometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+            let boxGeometry = SCNBox(width: 0.5, height: 0.5, length: 0.5, chamferRadius: 0)
             let material = SCNMaterial()
             material.diffuse.contents = UIColor.green
             
@@ -22,9 +22,10 @@ class Box: SCNNode {
             self.geometry = boxGeometry
             
             let physicsShape = SCNPhysicsShape(geometry: self.geometry!, options: nil)
-            
-            
             self.physicsBody = SCNPhysicsBody(type: .dynamic, shape: physicsShape)
+            self.physicsBody?.categoryBitMask = BitMuskCategory.box
+            self.physicsBody?.collisionBitMask = BitMuskCategory.box | BitMuskCategory.plane
+            self.physicsBody?.contactTestBitMask = BitMuskCategory.plane
             
             self.position = position
             
