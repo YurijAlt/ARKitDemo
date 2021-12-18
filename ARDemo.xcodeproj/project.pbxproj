@@ -13,9 +13,12 @@
 		C4A814F82763F3110097B986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A814F62763F3110097B986 /* Main.storyboard */; };
 		C4A814FA2763F3130097B986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A814F92763F3130097B986 /* Assets.xcassets */; };
 		C4A814FD2763F3130097B986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A814FB2763F3130097B986 /* LaunchScreen.storyboard */; };
+		C4DD4D00276BE9900073967E /* Handgun_dae.scn in Resources */ = {isa = PBXBuildFile; fileRef = C4DD4CFF276BE9900073967E /* Handgun_dae.scn */; };
 		C4FFF3E22767DCCF00B04B23 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FFF3E12767DCCF00B04B23 /* Plane.swift */; };
 		C4FFF3E4276BBDBF00B04B23 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FFF3E3276BBDBF00B04B23 /* Box.swift */; };
 		C4FFF3E6276BDA6800B04B23 /* BitMaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FFF3E5276BDA6700B04B23 /* BitMaskCategory.swift */; };
+		C4FFF3EE276BE7D700B04B23 /* Handgun_dae.dae in Resources */ = {isa = PBXBuildFile; fileRef = C4FFF3ED276BE7D700B04B23 /* Handgun_dae.dae */; };
+		C4FFF3F0276BE80F00B04B23 /* handgun_C.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4FFF3EF276BE80F00B04B23 /* handgun_C.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +29,12 @@
 		C4A814F72763F3110097B986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4A814F92763F3130097B986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4A814FC2763F3130097B986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C4DD4CFF276BE9900073967E /* Handgun_dae.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Handgun_dae.scn; path = "../../../../Downloads/dae-2/Handgun_dae.scn"; sourceTree = "<group>"; };
 		C4FFF3E12767DCCF00B04B23 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		C4FFF3E3276BBDBF00B04B23 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		C4FFF3E5276BDA6700B04B23 /* BitMaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskCategory.swift; sourceTree = "<group>"; };
+		C4FFF3ED276BE7D700B04B23 /* Handgun_dae.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Handgun_dae.dae; path = "../../../../Downloads/dae-2/Handgun_dae.dae"; sourceTree = "<group>"; };
+		C4FFF3EF276BE80F00B04B23 /* handgun_C.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = handgun_C.jpg; path = ../../../../Downloads/textures/handgun_C.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 			isa = PBXGroup;
 			children = (
 				C4A814F02763F3110097B986 /* AppDelegate.swift */,
+				C4FFF3ED276BE7D700B04B23 /* Handgun_dae.dae */,
+				C4DD4CFF276BE9900073967E /* Handgun_dae.scn */,
+				C4FFF3EF276BE80F00B04B23 /* handgun_C.jpg */,
 				C4A814F22763F3110097B986 /* art.scnassets */,
 				C4A814F42763F3110097B986 /* ViewController.swift */,
 				C4FFF3E3276BBDBF00B04B23 /* Box.swift */,
@@ -133,9 +142,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4A814F32763F3110097B986 /* art.scnassets in Resources */,
+				C4DD4D00276BE9900073967E /* Handgun_dae.scn in Resources */,
 				C4A814FD2763F3130097B986 /* LaunchScreen.storyboard in Resources */,
+				C4FFF3EE276BE7D700B04B23 /* Handgun_dae.dae in Resources */,
 				C4A814FA2763F3130097B986 /* Assets.xcassets in Resources */,
 				C4A814F82763F3110097B986 /* Main.storyboard in Resources */,
+				C4FFF3F0276BE80F00B04B23 /* handgun_C.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
