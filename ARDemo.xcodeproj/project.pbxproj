@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C442994D276E78FB00C6C826 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C442994C276E78FB00C6C826 /* VirtualObject.swift */; };
 		C4A814F12763F3110097B986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A814F02763F3110097B986 /* AppDelegate.swift */; };
 		C4A814F32763F3110097B986 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A814F22763F3110097B986 /* art.scnassets */; };
 		C4A814F52763F3110097B986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A814F42763F3110097B986 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C442994C276E78FB00C6C826 /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
 		C4A814ED2763F3110097B986 /* ARDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A814F02763F3110097B986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4A814F22763F3110097B986 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				C4FFF3EF276BE80F00B04B23 /* handgun_C.jpg */,
 				C4A814F22763F3110097B986 /* art.scnassets */,
 				C4A814F42763F3110097B986 /* ViewController.swift */,
+				C442994C276E78FB00C6C826 /* VirtualObject.swift */,
 				C4FFF3E3276BBDBF00B04B23 /* Box.swift */,
 				C4A814F62763F3110097B986 /* Main.storyboard */,
 				C4A814F92763F3130097B986 /* Assets.xcassets */,
@@ -160,6 +163,7 @@
 			files = (
 				C4A814F52763F3110097B986 /* ViewController.swift in Sources */,
 				C4FFF3E4276BBDBF00B04B23 /* Box.swift in Sources */,
+				C442994D276E78FB00C6C826 /* VirtualObject.swift in Sources */,
 				C4FFF3E6276BDA6800B04B23 /* BitMaskCategory.swift in Sources */,
 				C4FFF3E22767DCCF00B04B23 /* Plane.swift in Sources */,
 				C4A814F12763F3110097B986 /* AppDelegate.swift in Sources */,
