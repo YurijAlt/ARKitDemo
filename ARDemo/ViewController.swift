@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         
         sceneView.showsStatistics = true
         
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+        //sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         
         sceneView.autoenablesDefaultLighting = true
         let scene = SCNScene()
@@ -34,10 +34,45 @@ class ViewController: UIViewController {
     }
     
     func setupGestures() {
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(placeBox))
         tapGestureRecognizer.numberOfTapsRequired = 1
         self.sceneView.addGestureRecognizer(tapGestureRecognizer)
+        
+        let doubleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(placeVirtualObject))
+        doubleTapGestureRecognizer.numberOfTapsRequired = 2
+        self.sceneView.addGestureRecognizer(doubleTapGestureRecognizer)
+        
+        tapGestureRecognizer.require(toFail: doubleTapGestureRecognizer)
+        
     }
+    
+    
+    
+    @objc func placeVirtualObject(tapGesture: UITapGestureRecognizer) {
+        let sceneView = tapGesture.view as! ARSCNView
+        let location = tapGesture.location(in: sceneView)
+        
+        let hitTestResult = sceneView.hitTest(location, types: .existingPlaneUsingExtent)
+        guard let hitResult = hitTestResult.first else { return }
+        createVirtualObject(hitResult: hitResult)
+    }
+    
+    func createVirtualObject(hitResult: ARHitTestResult) {
+        let position = SCNVector3(
+            hitResult.worldTransform.columns.3.x,
+            hitResult.worldTransform.columns.3.y,
+            hitResult.worldTransform.columns.3.z
+        )
+        
+        let virtualObject = VirtualObject.availableObjects[1]
+        virtualObject.position = position
+        virtualObject.load()
+        sceneView.scene.rootNode.addChildNode(virtualObject)
+    }
+    
+    
+    
     
     @objc func placeBox(tapGesture: UITapGestureRecognizer) {
         let sceneView = tapGesture.view as! ARSCNView
