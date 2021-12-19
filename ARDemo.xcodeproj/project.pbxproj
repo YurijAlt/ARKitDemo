@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C442994D276E78FB00C6C826 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C442994C276E78FB00C6C826 /* VirtualObject.swift */; };
+		C442994F276FB59900C6C826 /* Smoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = C442994E276FB59800C6C826 /* Smoke.sks */; };
 		C4A814F12763F3110097B986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A814F02763F3110097B986 /* AppDelegate.swift */; };
 		C4A814F32763F3110097B986 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A814F22763F3110097B986 /* art.scnassets */; };
 		C4A814F52763F3110097B986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A814F42763F3110097B986 /* ViewController.swift */; };
@@ -15,13 +16,12 @@
 		C4A814FA2763F3130097B986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A814F92763F3130097B986 /* Assets.xcassets */; };
 		C4A814FD2763F3130097B986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A814FB2763F3130097B986 /* LaunchScreen.storyboard */; };
 		C4FFF3E22767DCCF00B04B23 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FFF3E12767DCCF00B04B23 /* Plane.swift */; };
-		C4FFF3E4276BBDBF00B04B23 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FFF3E3276BBDBF00B04B23 /* Box.swift */; };
 		C4FFF3E6276BDA6800B04B23 /* BitMaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FFF3E5276BDA6700B04B23 /* BitMaskCategory.swift */; };
-		C4FFF3F0276BE80F00B04B23 /* handgun_C.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4FFF3EF276BE80F00B04B23 /* handgun_C.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C442994C276E78FB00C6C826 /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		C442994E276FB59800C6C826 /* Smoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Smoke.sks; sourceTree = "<group>"; };
 		C4A814ED2763F3110097B986 /* ARDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A814F02763F3110097B986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4A814F22763F3110097B986 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -30,9 +30,7 @@
 		C4A814F92763F3130097B986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4A814FC2763F3130097B986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4FFF3E12767DCCF00B04B23 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
-		C4FFF3E3276BBDBF00B04B23 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		C4FFF3E5276BDA6700B04B23 /* BitMaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskCategory.swift; sourceTree = "<group>"; };
-		C4FFF3EF276BE80F00B04B23 /* handgun_C.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = handgun_C.jpg; path = ../../../../Downloads/textures/handgun_C.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				C4A814F02763F3110097B986 /* AppDelegate.swift */,
-				C4FFF3EF276BE80F00B04B23 /* handgun_C.jpg */,
 				C4A814F22763F3110097B986 /* art.scnassets */,
 				C4A814F42763F3110097B986 /* ViewController.swift */,
+				C442994E276FB59800C6C826 /* Smoke.sks */,
 				C442994C276E78FB00C6C826 /* VirtualObject.swift */,
-				C4FFF3E3276BBDBF00B04B23 /* Box.swift */,
 				C4A814F62763F3110097B986 /* Main.storyboard */,
 				C4A814F92763F3130097B986 /* Assets.xcassets */,
 				C4A814FB2763F3130097B986 /* LaunchScreen.storyboard */,
@@ -142,7 +139,7 @@
 				C4A814FD2763F3130097B986 /* LaunchScreen.storyboard in Resources */,
 				C4A814FA2763F3130097B986 /* Assets.xcassets in Resources */,
 				C4A814F82763F3110097B986 /* Main.storyboard in Resources */,
-				C4FFF3F0276BE80F00B04B23 /* handgun_C.jpg in Resources */,
+				C442994F276FB59900C6C826 /* Smoke.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +151,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4A814F52763F3110097B986 /* ViewController.swift in Sources */,
-				C4FFF3E4276BBDBF00B04B23 /* Box.swift in Sources */,
 				C442994D276E78FB00C6C826 /* VirtualObject.swift in Sources */,
 				C4FFF3E6276BDA6800B04B23 /* BitMaskCategory.swift in Sources */,
 				C4FFF3E22767DCCF00B04B23 /* Plane.swift in Sources */,

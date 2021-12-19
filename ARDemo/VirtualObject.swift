@@ -17,7 +17,6 @@ class VirtualObject: SCNReferenceNode {
             let url = element as! URL
             guard url.pathExtension == "scn" else { return nil }
             return VirtualObject(url: url)
-            print("yes")
         }
     }()
 }
