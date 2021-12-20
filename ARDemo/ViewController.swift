@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         
         sceneView.showsStatistics = true
         
-        //sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         
         sceneView.autoenablesDefaultLighting = true
         let scene = SCNScene()
@@ -59,9 +59,15 @@ class ViewController: UIViewController {
             hitResult.worldTransform.columns.3.z
         )
         
-        guard let virtualObject = VirtualObject.availableObjects.first else { fatalError("There is no virtual object available")}
-        virtualObject.position = position
+        let virtualObject = VirtualObject.availableObjects[2]
+        
         virtualObject.load()
+        virtualObject.position = position
+        
+        if let particleSystem = SCNParticleSystem(named: "Smoke.scnp", inDirectory: nil), let smokeNode = virtualObject.childNode(withName: "SmokeNode", recursively: true) {
+            smokeNode.addParticleSystem(particleSystem)
+        }
+        
         sceneView.scene.rootNode.addChildNode(virtualObject)
     }
 
