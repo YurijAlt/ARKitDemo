@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C442994D276E78FB00C6C826 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C442994C276E78FB00C6C826 /* VirtualObject.swift */; };
-		C442994F276FB59900C6C826 /* Smoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = C442994E276FB59800C6C826 /* Smoke.sks */; };
+		C4A0D57327710EF8007624D6 /* Smoke.scnp in Resources */ = {isa = PBXBuildFile; fileRef = C4A0D57227710EF8007624D6 /* Smoke.scnp */; };
 		C4A814F12763F3110097B986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A814F02763F3110097B986 /* AppDelegate.swift */; };
 		C4A814F32763F3110097B986 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A814F22763F3110097B986 /* art.scnassets */; };
 		C4A814F52763F3110097B986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A814F42763F3110097B986 /* ViewController.swift */; };
@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		C442994C276E78FB00C6C826 /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
-		C442994E276FB59800C6C826 /* Smoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Smoke.sks; sourceTree = "<group>"; };
+		C4A0D57227710EF8007624D6 /* Smoke.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Smoke.scnp; sourceTree = "<group>"; };
 		C4A814ED2763F3110097B986 /* ARDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A814F02763F3110097B986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4A814F22763F3110097B986 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 				C4A814F02763F3110097B986 /* AppDelegate.swift */,
 				C4A814F22763F3110097B986 /* art.scnassets */,
 				C4A814F42763F3110097B986 /* ViewController.swift */,
-				C442994E276FB59800C6C826 /* Smoke.sks */,
+				C4A0D57227710EF8007624D6 /* Smoke.scnp */,
 				C442994C276E78FB00C6C826 /* VirtualObject.swift */,
 				C4A814F62763F3110097B986 /* Main.storyboard */,
 				C4A814F92763F3130097B986 /* Assets.xcassets */,
@@ -137,9 +137,9 @@
 			files = (
 				C4A814F32763F3110097B986 /* art.scnassets in Resources */,
 				C4A814FD2763F3130097B986 /* LaunchScreen.storyboard in Resources */,
+				C4A0D57327710EF8007624D6 /* Smoke.scnp in Resources */,
 				C4A814FA2763F3130097B986 /* Assets.xcassets in Resources */,
 				C4A814F82763F3110097B986 /* Main.storyboard in Resources */,
-				C442994F276FB59900C6C826 /* Smoke.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
